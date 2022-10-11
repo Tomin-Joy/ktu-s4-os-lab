@@ -6,7 +6,9 @@ int pop(){
 	return t;
 }
 void push(int n){
-	
+	if(rear==-1){
+		rear=0;
+	}
 	front=(front+1)%10;
 	fQ[front]=n;
 }
@@ -27,6 +29,7 @@ int main(){
 		for(j=0;j<nf;j++){
 			if(frames[j]==pages[i]){
 				flag=1;
+				pop();
 				push(j);
 				break;
 			}else if(frames[j]==-1){
