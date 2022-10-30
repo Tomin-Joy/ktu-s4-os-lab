@@ -1,3 +1,4 @@
+//Program to implement FCFS cpu scheduling algorithm
 #include<stdio.h>
 typedef struct {
     int arrT;
