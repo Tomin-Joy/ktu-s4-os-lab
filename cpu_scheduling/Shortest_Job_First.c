@@ -25,7 +25,7 @@ int main(){
 			if(p[j].bt>p[j+1].bt){
 				temp=p[j];
 				p[j]=p[j+1];
-				p[j+1]=temp;
+				p[j+1]=temp;  // sorting array in ascending order
 			}
 		}
 	}
@@ -40,9 +40,9 @@ int main(){
 		// 	}
 		// }
 		p[i].flag=1;
-		p[i].ct=com+p[i].bt;
-		p[i].tt=p[i].ct-p[i].at;
-		p[i].wt=p[i].tt-p[i].bt;
+		p[i].ct=com+p[i].bt; //completion time
+		p[i].tt=p[i].ct-p[i].at; //turnaround time
+		p[i].wt=p[i].tt-p[i].bt; //waiting time
 		com=p[i].ct;
 	}
 	printf("Process\ttt\tbt\tat\twt\n\n");
@@ -51,8 +51,8 @@ int main(){
 		tTT+=p[i].tt;
 		tWT+=p[i].wt;
 	}
-	avgTT=tTT/n;
-	avgWT=tWT/n;
+	avgTT=tTT/n; //average turnaround time
+	avgWT=tWT/n; //average waiting time
 	printf("The average waiting time is : %.2f\n",avgWT);
 	printf("The average turn around time is : %.2f\n",avgTT);
 	return 0;
