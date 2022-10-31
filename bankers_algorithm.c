@@ -1,3 +1,5 @@
+//Program to implement Bankers Algorithm
+
 #include<stdio.h>
 typedef struct {
     int no;
