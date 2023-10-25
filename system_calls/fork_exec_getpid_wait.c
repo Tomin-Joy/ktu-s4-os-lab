@@ -4,6 +4,7 @@
 #include<unistd.h>
 #include<stdlib.h>
 int main(){
+  
 int pid;
 printf("getpid()\n The process id of current process: %d\n",getpid());
 printf("fork() creates child process\n");
